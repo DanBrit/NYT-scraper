@@ -1,0 +1,26 @@
+{
+  "name": "nyt-scraper",
+  "version": "1.0.0",
+  "description": "a simple scraper for the New York Times utilizing expres,mongoose,cheerio, and axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanBrit/NYT-scraper.git"
+  },
+  "author": "Daniel Marshall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanBrit/NYT-scraper/issues"
+  },
+  "homepage": "https://github.com/DanBrit/NYT-scraper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.2"
+  }
+}
