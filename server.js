@@ -70,8 +70,8 @@ app.get("/scrape", function(req, res) {
 		var result = {};
 		$("div.story-body").each(function(i, element) {
 			var link = $(element).find("a").attr("href");
-			var title = $(element).find("h2.headline").text().trim();
-			var summary = $(element).find("p.summary").text().trim();
+			var title = $(element).find("h2.css-l2vidh e4e4i5l1").text().trim();
+			var summary = $(element).find("p.css-1gh531 e4e4i5l4").text().trim();
 			var img = $(element).parent().find("figure.media").find("img").attr("src");
 			result.link = link;
 			result.title = title;
