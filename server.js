@@ -48,7 +48,7 @@ app.set("view engine", "handlebars");
 
 app.listen(port, function() {
 	console.log("Listening on port " + port);
-})
+});
 
 // Routes
 
@@ -89,6 +89,7 @@ app.get("/scrape", function(req, res) {
 				if (data.length === 0) {
 					entry.save(function(err, data) {
 						if (err) throw err;
+						console.log("Article Saved.");
 					});
 				}
 			});
@@ -112,8 +113,8 @@ app.get("/saved", function(req, res) {
 app.get("/:id", function(req, res) {
 	Article.findById(req.params.id, function(err, data) {
 		res.json(data);
-	})
-})
+	});
+});
 
 app.post("/search", function(req, res) {
 	console.log(req.body.search);
@@ -125,7 +126,7 @@ app.post("/search", function(req, res) {
 		else {
 			res.render("search", {search: data})
 		}
-	})
+	});
 });
 
 app.post("/save/:id", function(req, res) {
@@ -160,5 +161,5 @@ app.get("/note/:id", function(req, res) {
 	var id = req.params.id;
 	Article.findById(id).populate("note").exec(function(err, data) {
 		res.send(data.note);
-	})
-})
+	});
+});
