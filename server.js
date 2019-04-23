@@ -68,7 +68,7 @@ app.get("/scrape", function(req, res) {
 	request("https://www.nytimes.com/section/world", function(error, response, html) {
 		var $ = cheerio.load(html);
 		var result = {};
-		$("div.story-body").each(function(i, element) {
+		$("div.css-8age7h ekkqrpp0").each(function(i, element) {
 			var link = $(element).find("a").attr("href");
 			var title = $(element).find("h2.css-l2vidh e4e4i5l1").text().trim();
 			var summary = $(element).find("p.css-1gh531 e4e4i5l4").text().trim();
